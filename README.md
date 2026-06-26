@@ -4,21 +4,22 @@ Second Semester, 2025/2026 Academic Session
 ## 👤 Student Information
 Field
 Details
-Name
+### Name
 Chiadi Uchechukwu Paul
-Reg. No.
+### Reg. No.
 2023514221
-Department
+### Department
 Computer Science
-Level
+### Level
 300 Level
-Institution
+### Institution
 Nnamdi Azikiwe University, Awka
-Course Code
+### Course Code
 CSC 308
-Course Title
+### Course Title
 Operating Systems
-📁 Repository Structure
+
+# 📁 Repository Structure
 │
 ├── README.md
 │
@@ -42,19 +43,19 @@ Session
 Description
 Source Code
 Output
-Session 1
+## Session 1
 Mutex Lock Demonstration
 session1_mutex.c
 
-Session 2
+## Session 2
 Producer-Consumer Simulation
 session2_prodcon.c
 
-Session 3
+## Session 3
 Semaphore Implementation in C
 session3_semaphore.c
 
-Session 4
+## Session 4
 Shared Memory Programming
 session4_shm.c
 
@@ -70,43 +71,44 @@ All programs are written in C and tested on Linux (Ubuntu).
 Requires gcc with pthread support.
 Week 6 — IPC Lab
 Bash
+
 # 🔑 Key Functions Reference
-Function
-Library
-Purpose
+• Function ||
+| Library ||
+| Purpose ||
 pthread_create()
 pthread.h
-Create a new thread
+• Create a new thread
 pthread_join()
 pthread.h
-Wait for thread to finish
+• Wait for thread to finish
 pthread_mutex_lock()
 pthread.h
-Acquire mutex lock
+• Acquire mutex lock
 pthread_mutex_unlock()
 pthread.h
-Release mutex lock
+• Release mutex lock
 sem_init()
 semaphore.h
-Initialize a semaphore
+• Initialize a semaphore
 sem_wait()
 semaphore.h
-Decrement semaphore (wait)
+• Decrement semaphore (wait)
 sem_post()
 semaphore.h
-Increment semaphore (signal)
+• Increment semaphore (signal)
 shmget()
 sys/shm.h
-Create shared memory segment
+• Create shared memory segment
 shmat()
 sys/shm.h
-Attach shared memory
+• Attach shared memory
 shmdt()
 sys/shm.h
-Detach shared memory
+• Detach shared memory
 shmctl(IPC_RMID)
 sys/shm.h
-Destroy shared memory segment
+• Destroy shared memory segment
 
 #📌 Notes
 All lab outputs were verified and simulated on a Linux environment

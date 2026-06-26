@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <pthread.h>
+
+#define THREADS     5
+#define INCREMENTS  100000
+
+long counter = 0;
+pthread_mutex_t lock;
+
+void *increment(void *arg) {
+    int use_mutex = *(int *)arg;
+    for (int i = 0; i < INCREMENTS; i++) {
+        if (use_mutex) pthread_mutex_lock(&lock);
+        counter++;
+        if (use_mutex) pthread_mutex_unlock(&lock);
+    }
+    return NULL;
+}
+
+void run(int use_mutex) {
+    pthread_t threads[THREADS];
+    counter = 0;
+    for (int i = 0; i < THREADS; i++)
+        pthread_create(&threads[i], NULL, increment, &use_mutex);
+    for (int i = 0; i < THREADS; i++)
+        pthread_join(threads[i], NULL);
+    long expected = (long)THREADS * INCREMENTS;
+    printf("%s => Counter: %ld | Expected: %ld | Lost: %ld %s\n",
+           use_mutex ? "WITH Mutex   " : "WITHOUT Mutex",
+           counter, expected, expected - counter,
+           use_mutex ? "✓" : "✗");
+}
+
+int main() {
+    pthread_mutex_init(&lock, NULL);
+    run(0);   // without mutex
+    run(1);   // with mutex
+    pthread_mutex_destroy(&lock);
+    return 0;
+}

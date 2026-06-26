@@ -1,7 +1,7 @@
-CSC 308 — Operating Systems 🖥️
-Department of Computer Science | Nnamdi Azikiwe University (UNIZIK)
+# CSC 308 — Operating Systems 🖥️
+## Department of Computer Science | Nnamdi Azikiwe University (UNIZIK)
 Second Semester, 2025/2026 Academic Session
-👤 Student Information
+## 👤 Student Information
 Field
 Details
 Name
@@ -19,10 +19,24 @@ CSC 308
 Course Title
 Operating Systems
 📁 Repository Structure
-Code
-📚 Assignments
+│
+├── README.md
+│
+├── Week1-OS-Intro/
+│   ├── docs/
+│   │   └── CSC308_Week1_Answers.pdf
+│   └── ...
+│
+└── Week6-IPC-Lab/
+    ├── session1_mutex.c
+    ├── session2_prodcon.c
+    ├── session3_semaphore.c
+    ├── session4_shm.c
+    └── docs/
+        └── CSC308_Week6_IPC_Lab.pngCSC 308 — Operating Systems 🖥️
+# 📚 Assignment
 
-✅ Week 6 — IPC, Process Synchronization & Shared Memory
+## ✅ Week 6 — IPC, Process Synchronization & Shared Memory
 Topics Covered: Mutex Locks, Semaphores, Producer-Consumer, Shared Memory
 Session
 Description
@@ -31,31 +45,32 @@ Output
 Session 1
 Mutex Lock Demonstration
 session1_mutex.c
-View Screenshot
+
 Session 2
 Producer-Consumer Simulation
 session2_prodcon.c
-View Screenshot
+
 Session 3
 Semaphore Implementation in C
 session3_semaphore.c
-View Screenshot
+
 Session 4
 Shared Memory Programming
 session4_shm.c
-View Screenshot
-Key concepts covered:
+
+# Key concepts covered:
 Mutual exclusion using pthread_mutex_lock/unlock
 Producer-Consumer problem using POSIX semaphores (sem_wait, sem_post)
 Binary vs Counting semaphores
 Inter-Process Communication (IPC) using shmget, shmat, shmdt, shmctl
 Race conditions and how to eliminate them
-🛠️ How to Compile & Run
+
+# 🛠️ How to Compile & Run
 All programs are written in C and tested on Linux (Ubuntu).
 Requires gcc with pthread support.
 Week 6 — IPC Lab
 Bash
-🔑 Key Functions Reference
+# 🔑 Key Functions Reference
 Function
 Library
 Purpose
@@ -92,28 +107,13 @@ Detach shared memory
 shmctl(IPC_RMID)
 sys/shm.h
 Destroy shared memory segment
-📌 Notes
+
+#📌 Notes
 All lab outputs were verified and simulated on a Linux environment
 Source code is fully commented for clarity
 PDF documents contain detailed written answers to all theory questions
 CSC 308 — Operating Systems | Nnamdi Azikiwe University | 2025/2026CSC 308 — Operating Systems 🖥️
 Department of Computer Science | Nnamdi Azikiwe University (UNIZIK)
 Second Semester, 2025/2026 Academic Session
-
-│
-├── README.md
-│
-├── Week1-OS-Intro/
-│   ├── docs/
-│   │   └── CSC308_Week1_Answers.pdf
-│   └── ...
-│
-└── Week6-IPC-Lab/
-    ├── session1_mutex.c
-    ├── session2_prodcon.c
-    ├── session3_semaphore.c
-    ├── session4_shm.c
-    └── docs/
-        └── CSC308_Week6_IPC_Lab.pngCSC 308 — Operating Systems 🖥️
 
 
